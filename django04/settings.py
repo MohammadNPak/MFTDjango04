@@ -56,13 +56,9 @@ ROOT_URLCONF = 'django04.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-<<<<<<< HEAD
-        'DIRS': [BASE_DIR / "templates"],
-=======
         'DIRS': [
             BASE_DIR / "templates" ,
         ],
->>>>>>> 5259b1a76cdf37c308d54fba6b8d6abcd2409e98
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,10 +121,6 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-<<<<<<< HEAD
-    BASE_DIR / "accounts" / "static" ,
-=======
->>>>>>> 5259b1a76cdf37c308d54fba6b8d6abcd2409e98
     BASE_DIR / "static" ,
 ]
 # Default primary key field type

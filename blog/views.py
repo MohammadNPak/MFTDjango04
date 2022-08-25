@@ -9,4 +9,4 @@ def post(request):
     return render(request,'blog/post.html')
 
 def posts(request):
-    return render(request,'blog/posts.html')
+    return render(request,'blog/posts.html',context={"name":"ali","post_body":"sdfsdfsaaaaaaaaaaaaaaaaaaaaaaaaafsdgfsdgsdgsd"})
