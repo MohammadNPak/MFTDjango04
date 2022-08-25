@@ -2,7 +2,7 @@
 
 ### OSX ###
 .venv
-
+sqlite
 .DS_Store
 .AppleDouble
 .LSOverride

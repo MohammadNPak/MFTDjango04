@@ -46,13 +46,15 @@
               <img class="round-img"
                    src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200"
                    alt=""/>
-              <h4>{{name}}</h4>
+              <h4>{{user.name}} {{user.lastname}}</h4>
             </a>
           </div>
           <div>
+            <h1>{{post.title}}</h1>
             <p class="my-1">
-              {{post_body}}
+              {{post.body}}
             </p>
+            <small>{{post.date|timesince}}</small>
             <button class="btn">
               <i class="fas fa-thumbs-up"></i> <span>4</span>
             </button>
