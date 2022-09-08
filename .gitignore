@@ -6,6 +6,7 @@ sqlite
 .DS_Store
 .AppleDouble
 .LSOverride
+test_db/
 
 # Icon must end with two \r
 Icon
