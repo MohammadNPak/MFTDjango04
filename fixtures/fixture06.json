@@ -1,5 +1,14 @@
 [
     {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "username": "abc",
+           "password":"123"
+        }
+    },
+
+    {
         "model": "blog.post",
         "pk": 1,
         "fields": {
