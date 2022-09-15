@@ -1,0 +1,75 @@
+[
+    {
+        "model": "blog.post",
+        "pk": 1,
+        "fields": {
+            "title": "post 1",
+            "body": "first post body",
+            "created_at": "2022-09-08T14:09:42.051Z",
+            "updated_at": "2022-09-15T10:31:07.547Z"
+        }
+    },
+    {
+        "model": "blog.post",
+        "pk": 2,
+        "fields": {
+            "title": "post2",
+            "body": "post 2 body",
+            "created_at": "2022-09-15T10:31:19.745Z",
+            "updated_at": "2022-09-15T10:31:19.745Z"
+        }
+    },
+    {
+        "model": "blog.comment",
+        "pk": 1,
+        "fields": {
+            "post": 1,
+            "body": "comment1 from post 1",
+            "is_validate": false,
+            "created_at": "2022-09-15T12:03:00.023Z",
+            "updated_at": "2022-09-15T12:23:08.891Z"
+        }
+    },
+    {
+        "model": "blog.comment",
+        "pk": 2,
+        "fields": {
+            "post": 1,
+            "body": "comment2 post 1",
+            "is_validate": false,
+            "created_at": "2022-09-15T12:04:57.515Z",
+            "updated_at": "2022-09-15T12:04:57.515Z"
+        }
+    },
+    {
+        "model": "blog.comment",
+        "pk": 3,
+        "fields": {
+            "post": 2,
+            "body": "comment1 post2",
+            "is_validate": false,
+            "created_at": "2022-09-15T12:05:19.455Z",
+            "updated_at": "2022-09-15T12:05:19.455Z"
+        }
+    },
+    {
+        "model": "blog.comment",
+        "pk": 4,
+        "fields": {
+            "post": 2,
+            "body": "comment2 post2",
+            "is_validate": false,
+            "created_at": "2022-09-15T12:05:30.421Z",
+            "updated_at": "2022-09-15T12:05:30.421Z"
+        }
+    },
+    {
+        "model": "accounts.userprofile",
+        "pk": 1,
+        "fields": {
+            "bio": "hello I'm abc",
+            "user": 1,
+            "picture": "profile_picture/images.png"
+        }
+    }
+]
