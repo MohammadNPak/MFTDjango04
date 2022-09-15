@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from accounts.models import User,UserProfile
 # Create your views here.
 
 
@@ -24,7 +24,8 @@ def login(request):
 
 
 def profile(request):
-    return render(request, 'accounts/profile.html', {})
+    user_profile = UserProfile.objects.get(id=1)
+    return render(request, 'accounts/profile.html', {"user_profile":user_profile})
 
 
 def profiles(request):
