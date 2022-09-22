@@ -16,13 +16,15 @@
         <input type="submit" value="Submit" class="btn btn-dark my-1" />
       </form>
       <div class="posts">
+        {% for post in blog_post %}
+        
         <div class="post bg-white my-1 p-1">
           <div>
-            <a href="profile.html">
+            <a href="{{post.author.get_absolute_url}}">
               <img class="round-img"
-                   src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200"
+                   src="{{post.author.picture.url}}"
                    alt=""/>
-              <h4>{{user.name}} {{user.lastname}}</h4>
+              <h4>{{post.author.user.username}}</h4>
             </a>
           </div>
           <div>
@@ -32,39 +34,17 @@
             </p>
             <small>{{post.created_at|timesince}}</small>
             <button class="btn">
-              <i class="fas fa-thumbs-up"></i> <span>4</span>
+              <i class="fas fa-thumbs-up"></i> <span>{{post.like.count}}</span>
             </button>
             <button class="btn">
-              <i class="fas fa-thumbs-down"></i>
+              <i class="fas fa-thumbs-down"></i><span>{{post.dislike.count}}</span>
             </button>
-            <a href="post.html" class="btn btn-primary">Discussion</a>
+            <a href="{{post.get_absolute_url}}" class="btn btn-primary">Discussion</a>
           </div>
         </div>
-        <div class="post bg-white my-1 p-1">
-          <div>
-            <a href="profile.html">
-              <img class="round-img"
-                   src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200"
-                   alt=""/>
-              <h4>John Doe</h4>
-            </a>
-          </div>
-          <div>
-            <p class="my-1">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Ratione dolores officia assumenda dolor maiores sint pariatur
-              quia voluptatibus voluptate perspiciatis commodi possimus nemo
-              aut, voluptas expedita facilis amet hic culpa.
-            </p>
-            <button class="btn">
-              <i class="fas fa-thumbs-up"></i> <span>4</span>
-            </button>
-            <button class="btn">
-              <i class="fas fa-thumbs-down"></i>
-            </button>
-            <a href="post.html" class="btn btn-primary">Discussion</a>
-          </div>
-        </div>
+        {% endfor %}
+
+        
       </div>
     </div>
   </section>
